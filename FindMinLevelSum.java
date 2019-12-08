@@ -1,5 +1,7 @@
 /*
 Given a binary tree, return the level of the tree with minimum sum.
+For two or more equal sums of levels return the first equivalent level.
+
 For example, given the tree:
 
 L1:                10
@@ -11,6 +13,27 @@ L3:      / \    / \   / \   / \
 L4:     1   2  3   4 5   6 7   8
        
 Return 3.
+
+L1:                10
+L1:           /          \
+L2:          10          40
+L1:        /    \      /    \
+L3:       1      1     1     1
+L3:      / \    / \   / \   / \
+L4:     1   0  0   0 0   0 0   0
+
+Return 4.
+L1:                10
+L1:           /          \
+L2:          10          40
+L1:        /    \      /    \
+L3:       1      1     1     1
+L3:      / \    / \   / \   / \
+L4:     1   0  0   0 0   0 0   0
+L4:                       / \ 
+L5:                      1   1  
+
+Return 4.
 */
 
 /*
@@ -44,10 +67,13 @@ public class FindMinLevelSum{
     }
     
     private static int findMinimumSumLevelInGivenTree(Node tree){
+        //hold the sum at each level
         Map<Integer, Integer> sumAtEachLevelMap = new HashMap<Integer, Integer>();
         
+        //puts all level sums in map
         findLevelSums(tree, sumAtEachLevelMap, 1);
         
+        // gets the level with least sum
         return getMinimumSumLevel(sumAtEachLevelMap);
     }
    
@@ -87,7 +113,7 @@ public class FindMinLevelSum{
         return minLevel;
     }
     
-    static class Node{
+    private static class Node{
         int data;
         Node left;
         Node right;
