@@ -20,7 +20,7 @@ Return 3.
   time:   O(t)
 
   space:  O( log(t) )
-    find all node in tree: 
+    find all node in tree: 2^h - 1 = t
           2^h - 1 = t
           h * log(2) - log(1) = log(t)
           h * log(2) - 0 = log(t)
@@ -52,7 +52,7 @@ public class FindMinLevelSum{
     }
    
     private static void findLevelSums(Node node, Map<Integer, Integer> sumAtEachLevelMap, int treeLevel){
-           //we don't care about nulls
+           //we don't care about null nodes
            if(node == null){
             return;
         }
@@ -69,9 +69,11 @@ public class FindMinLevelSum{
     }
        
     private static int getMinimumSumLevel(Map<Integer, Integer> sumAtEachLevelMap){
+        //setting local variables 
         int minLevel = Integer.MAX_VALUE;
         int minSum = Integer.MAX_VALUE;
         
+        //finds the min sum in the map and sets new min values
         for (Map.Entry<Integer,Integer> levelSums : sumAtEachLevelMap.entrySet()){  
             //System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue()); 
 
@@ -81,6 +83,7 @@ public class FindMinLevelSum{
             }
         }
         
+        //return min level in the map.
         return minLevel;
     }
     
