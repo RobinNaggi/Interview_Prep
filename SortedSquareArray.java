@@ -17,13 +17,17 @@ public class SortedSquareArray{
     }
     
     private static int[] getSortedSquaredArray(int[] input){
+        //return null if the input array is null
         if(input == null ) return null;
+        
+        //return the same array if the length is 0
         if(input.length == 0) return input;
         
+        //square the input arrays value in the array
         for(int i = 0; i < input.length; i++){
             input[i] = (int)Math.pow(input[i],2);
         }
-        
+        //sort the input array 
         Arrays.sort(input);
         
         return input;
