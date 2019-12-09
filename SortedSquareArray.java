@@ -6,8 +6,8 @@ For example, given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81].
 
 /*
 * Time and space complexity
-    n: total number of values in the array
-  time:   O(n * log(n))
+    N: total number of values in the array
+  time:   O(N + Nlog(N)) -> O(Nlog(N))
   space:  O(1)
 */
 
@@ -30,10 +30,12 @@ public class SortedSquareArray{
         if(input.length == 0) return input;
         
         //square the input arrays value in the array
+        //time:   O(N)
         for(int i = 0; i < input.length; i++){
             input[i] = (int)Math.pow(input[i],2);
         }
         //sort the input array 
+        //time:   O(Nlog(N))
         Arrays.sort(input);
         
         return input;
