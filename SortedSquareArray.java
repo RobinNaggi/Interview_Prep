@@ -5,8 +5,10 @@ For example, given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81].
 */
 
 /*
-*   Time and Space complexity
-    time: 
+* Time and space complexity
+    n: total number of values in the array
+  time:   O(n * log(n))
+  space:  O(1)
 */
 
 import java.util.Arrays;
