@@ -7,3 +7,11 @@
 * one set of numbers that covers all these intervals is {3, 6}.
 */
 
+/*
+* Time and space complexity
+  Time:  O(N)
+  Space: O(1)
+*/
+
+
+
