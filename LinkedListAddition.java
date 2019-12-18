@@ -17,3 +17,10 @@ return 124 (99 + 25) as:
 
 4 -> 2 -> 1
 */
+
+/*
+* Time and space complexity
+    time:   O()
+    space:  O()
+*/
+
