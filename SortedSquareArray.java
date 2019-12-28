@@ -7,7 +7,7 @@ For example, given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81].
 /*
 * Time and space complexity
     N: total number of values in the array
-  time:   O(N + Nlog(N)) -> O(Nlog(N))
+  time:   O(N * Nlog(N))
   space:  O(1)
 */
 
