@@ -33,6 +33,7 @@ public class FindTwoElements{
         
     }
     
+    //Time: O(n) Space: O(n) 
     private static int[] findSingleElements(int[] list){
         int[] result = new int[2];
         int resultListInputIndex = 0;
@@ -57,6 +58,7 @@ public class FindTwoElements{
         return result;
     }
     
+    //Time: O(nlog(n)) Space: O(1)
     private static int[] getSingleElements(int[] list){
         int[] result = new int[2];
         int resultListInputIndex = 0;
