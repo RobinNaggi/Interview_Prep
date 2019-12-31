@@ -20,7 +20,7 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
-public class HelloWorld{
+public class FindTwoElements{
 
     public static void main(String []args){
         int[] list = getList();
