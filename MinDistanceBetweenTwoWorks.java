@@ -18,7 +18,7 @@ public class MinDistanceBetweenTwoWorks{
     public static void main(String []args){
         
         String[] twoWords = {"hello","world"};
-        String sentence = "dog cat hello cat dog dog hello cat world";
+        String sentence = "dog cat+ hello! cat dog, dog hello cat' world";
         
         //remove all other characters from the string besides whitespace 
         sentence = sentence.replaceAll("[^a-zA-Z0-9\\s+]", "");
