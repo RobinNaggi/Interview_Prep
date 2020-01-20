@@ -7,6 +7,8 @@ Given the string "abcdef", return null.
 
 Time:   O(n)
 Space:  O(n)
+
+
 */
 
 import java.util.Set;
@@ -41,6 +43,21 @@ public class FirstRecurringCharacter{
             }
         }
         
+        return null;
+    }
+    
+    private static Character findFirstRecurringCharacterPart2(String str){
+        if(str.length() <= 1) return null;
+        
+        int[] seenCharacter = new int[26];
+        
+        for(int i = 0; i < str.length(); i++){
+            if(seenCharacter[str.charAt(i) - 'a'] != 0){
+                return str.charAt(i);
+            }else{
+                seenCharacter[str.charAt(i) - 'a']++;
+            }
+        }
         return null;
     }
 }
