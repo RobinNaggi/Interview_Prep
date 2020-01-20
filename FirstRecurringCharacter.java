@@ -5,4 +5,7 @@ or null if there is no recurring character.
 For example, given the string "acbbac", return "b". 
 Given the string "abcdef", return null.
 
+Time:   O(n)
+Space:  O(n)
 */
+
